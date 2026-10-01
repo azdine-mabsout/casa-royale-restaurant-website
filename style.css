@@ -1,0 +1,44 @@
+    html, body {
+      overflow-x: hidden;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+    /* Subtle luxury scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #211812;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #c6a15b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #e9c178;
+    }
+
+    /* Elegant nav animated underline */
+    .nav-link {
+      position: relative;
+      transition: color 0.25s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -6px;
+      left: 0;
+      background-color: #C6A15B;
+      transition: width 0.25s ease-in-out;
+      border-radius: 9999px;
+    }
+    .nav-link:hover::after,
+    .nav-link.active-nav::after {
+      width: 100%;
+    }
+    .nav-link.active-nav {
+      color: #775A1A !important;
+      font-weight: 600;
+    }
